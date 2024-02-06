@@ -109,7 +109,5 @@ class StockController extends Controller
 
         return $this->fetchWhereLikeAnd("stocks", "productname = $search_stock");
     }
-    public sample here(){
-        
-    }
+    
 }
