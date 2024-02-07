@@ -26,7 +26,7 @@
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Home Page</span></li>
 
                     <!-- User interface -->
-                    <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/carousel.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/introduction.php')) {
+                    <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/carousel.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/introduction.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/services.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/mission.php')) {
                                                 echo "active";
                                             } ?>">
                         <a href="javascript:void(0)" class="menu-link menu-toggle">

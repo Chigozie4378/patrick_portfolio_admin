@@ -15,4 +15,11 @@ class ServicesController extends Controller
             $this->insert('services', $title,$body, $link);
         }
     }
+    public function delete()
+    {
+        if (isset($_GET["id"])) {
+            $id = $_GET["id"];
+            return $this->trashWhere("services", "id = $id");
+        }
+    }
 }

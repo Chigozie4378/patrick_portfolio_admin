@@ -4,7 +4,7 @@ include_once "../includes/sidebar.php";
 include_once "../includes/navbar.php";
 $ctr = new ServicesController();
 $ctr->store();
-
+$ctr->delete();
 ?>
 
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">Services</h4>
@@ -39,7 +39,7 @@ $ctr->store();
         <div class="card">
             <h5 class="card-header">Services Action</h5>
             <div class="card-body">
-                <div class="table-responsive text-nowrap">
+                <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -58,7 +58,7 @@ $ctr->store();
                                     </td>
                                     <td><?php echo $result['body']?></td>
 
-                                    <td><a href="services.php?id = <?php echo $result['id']?>"><i class="bx bx-trash me-1"></i></a></td>
+                                    <td><a href="services.php?id=<?php echo $result['id']?>"><i class="bx bx-trash me-1"></i></a></td>
 
                                 </tr>
                             <?php  }

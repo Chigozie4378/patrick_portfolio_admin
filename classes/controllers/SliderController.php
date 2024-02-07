@@ -21,4 +21,15 @@ class SliderController extends Controller
         
         
     }
+    public function delete()
+    {
+        if (isset($_GET["id"])) {
+            $id = $_GET["id"];
+            $filepath1 = $_GET["image"];
+            $filepath2 = $_GET["image2"];
+            unlink($filepath1);
+            unlink($filepath2);
+            return $this->trashWhere("slider", "id = $id");
+        }
+    }
 }

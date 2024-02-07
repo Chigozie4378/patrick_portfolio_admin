@@ -4,6 +4,7 @@ include_once "../includes/sidebar.php";
 include_once "../includes/navbar.php";
 $ctr = new SliderController();
 $ctr->store();
+$ctr->delete();
 ?>
 
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">Slider</h4>
@@ -56,8 +57,9 @@ $ctr->store();
 <tr>
                 <td><?php echo $result['title']?></td>
                 <td><img src="<?php echo $result['image']?>" alt="" height="50" width="50"></td>
+               
 
-                <td><a href="carousel.php?id=<?php  echo $result['id'] ?>"><i class="bx bx-trash me-1"></i></a></td>
+                <td><a href="carousel.php?id=<?php  echo $result['id'] ?>&filepath=<?php  echo $result['image'] ?>&filepath2=<?php  echo $result['image2'] ?>"><i class="bx bx-trash me-1"></i></a></td>
 
               </tr>
              <?php   }
