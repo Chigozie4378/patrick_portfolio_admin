@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 05, 2024 at 10:16 AM
+-- Generation Time: Feb 07, 2024 at 09:01 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,15 +31,16 @@ CREATE TABLE `about` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
   `body` longtext NOT NULL,
-  `image` varchar(255) NOT NULL
+  `image` varchar(255) NOT NULL,
+  `image2` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `about`
 --
 
-INSERT INTO `about` (`id`, `title`, `body`, `image`) VALUES
-(1, 'go', '<p>gog gog</p>', '../assets/images/austin-distel-wD1LRb9OeEo-unsplash.jpg');
+INSERT INTO `about` (`id`, `title`, `body`, `image`, `image2`) VALUES
+(1, '\'Lorem\'', '\'\'', '\'../assets/images/\'', '\'../../patrick_portfolio_admin/assets/images/\'');
 
 -- --------------------------------------------------------
 
