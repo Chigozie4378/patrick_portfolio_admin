@@ -56,7 +56,7 @@ $ctr->store();
                             <?php
                             $select = $ctr->index();
                             while ($result = mysqli_fetch_array($select)) { ?>
-                                <tr>
+                                <tr >
                                     <td><?php echo $result['title']?></td>
                                     <td><?php echo $result['body']?></td>
                                     <td><img src="<?php echo $result['image']?>" height="50" width="50" alt=""></td>

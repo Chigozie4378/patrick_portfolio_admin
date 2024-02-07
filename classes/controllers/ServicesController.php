@@ -11,7 +11,8 @@ class ServicesController extends Controller
         if (isset($_POST["submit"])) {
             $title = Validate::valInput($_POST['title']);
             $body = Validate::valInput($_POST['body']);
-            $this->insert('services', $title,$body);
+            $link = Validate::valInput($_POST['link']);
+            $this->insert('services', $title,$body, $link);
         }
     }
 }
