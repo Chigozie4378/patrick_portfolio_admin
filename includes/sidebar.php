@@ -26,7 +26,7 @@
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Home Page</span></li>
 
                     <!-- User interface -->
-                    <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/carousel.php') || ($_SERVER['PHP_SELF'] == '/portfolio_admin/views/introduction.php')) {
+                    <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/carousel.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/introduction.php')) {
                                                 echo "active";
                                             } ?>">
                         <a href="javascript:void(0)" class="menu-link menu-toggle">
@@ -36,7 +36,7 @@
                         <ul class="menu-sub">
 
 
-                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/carousel.php')) {
+                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/carousel.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="carousel.php" class="menu-link">
@@ -45,21 +45,21 @@
                             </li>
 
 
-                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/introduction.php')) {
+                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/introduction.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="introduction.php" class="menu-link">
                                     <div data-i18n="Progress">Introduction</div>
                                 </a>
                             </li>
-                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/services.php')) {
+                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/services.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="services.php" class="menu-link">
                                     <div data-i18n="Progress">Services</div>
                                 </a>
                             </li>
-                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/mission.php')) {
+                            <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/mission.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="mission.php" class="menu-link">
@@ -75,7 +75,7 @@
                     <!-- About -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">About Page</span></li>
                     <!-- Forms -->
-                    <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/about.php')) {
+                    <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/about.php')) {
                                                 echo "active";
                                             } ?> open">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -83,7 +83,7 @@
                             <div data-i18n="Form Elements">About</div>
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/about.php')) {
+                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/about.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="about.php" class="menu-link">
@@ -97,7 +97,7 @@
                     <!-- Services -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Services Page</span></li>
                     <!-- Forms -->
-                    <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/big_data.php') || ($_SERVER['PHP_SELF'] == '/portfolio_admin/views/warehouse.php') || ($_SERVER['PHP_SELF'] == '/portfolio_admin/views/data_analysis.php')) {
+                    <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/big_data.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/warehouse.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/data_analysis.php')) {
                                                 echo "active";
                                             } ?> open">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -105,21 +105,21 @@
                             <div data-i18n="Form Elements">Services</div>
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/big_data.php')) {
+                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/big_data.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="big_data.php" class="menu-link">
                                     <div data-i18n="big_data.php">Big Data</div>
                                 </a>
                             </li>
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/warehouse.php')) {
+                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/warehouse.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="warehouse.php" class="menu-link">
                                     <div data-i18n="warehouse.php">Data Warehouse</div>
                                 </a>
                             </li>
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/portfolio_admin/views/data_analysis.php')) {
+                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/data_analysis.php')) {
                                                         echo "active";
                                                     } ?>">
                                 <a href="data_analysis.php" class="menu-link">
