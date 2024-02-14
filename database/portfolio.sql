@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2024 at 12:03 PM
+-- Generation Time: Feb 14, 2024 at 11:02 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -87,6 +87,9 @@ INSERT INTO `mission` (`id`, `body`) VALUES
 CREATE TABLE `services` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
+  `description` text NOT NULL,
+  `emphasize` text NOT NULL,
+  `introduction` text NOT NULL,
   `body` text NOT NULL,
   `link` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -95,13 +98,8 @@ CREATE TABLE `services` (
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `title`, `body`, `link`) VALUES
-(3, 'Data Science', 'this is Data Science', ''),
-(4, 'Data Warehousing', 'For several organisations, the story is the same; data amasses swiftly, comes in several formats, from several sources', ''),
-(5, 'Analytics / BI', 'Consultants in SoftSkan will support you to turn your data into actionable relics by helping you gain more insight into your data.', ''),
-(6, 'Data Warehousing', 'For several organisations, the story is the same; data amasses swiftly, comes in several formats, from several sources', ''),
-(7, 'Analytics / BI', 'Consultants in SoftSkan will support you to turn your data into actionable relics by helping you gain more insight into your data.', ''),
-(8, 'Analytics / BI', 'Consultants in SoftSkan will support you to turn your data into actionable relics by helping you gain more insight into your data.\r\nConsultants in SoftSkan will support you to turn your data into actionable relics by helping you gain more insight into your data.', '');
+INSERT INTO `services` (`id`, `title`, `description`, `emphasize`, `introduction`, `body`, `link`) VALUES
+(45, 'Data Science', 'Data Science Data Science Data Science Data Science Data Science Data Science Data Science Data Science Data Science Data Science Data Science Data Science Data Science', '<p>This Data science key note This Data science key note This Data science key note This Data science key note This Data science key note This Data science key note This Data science key note This Data science key note This Data science key note This Data science key note</p>', '<p>This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction</p><p>This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction This is Data Science Intoduction</p>', '<p>This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body</p><p>This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body</p><p>This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body  This Data science body</p>', '../../patrick_portfolio/pages/services/data_science.php');
 
 -- --------------------------------------------------------
 
@@ -121,10 +119,10 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `title`, `image`, `image2`) VALUES
-(4, 'Data Analysis', '../assets/images/images.jpeg', '../../patrick_portfolio_admin/assets/images/images.jpeg'),
-(5, 'Database', '../assets/images/download.jpeg', '../../patrick_portfolio_admin/assets/images/download.jpeg'),
 (6, 'Data Science', '../assets/images/austin-distel-wD1LRb9OeEo-unsplash.jpg', '../../patrick_portfolio_admin/assets/images/austin-distel-wD1LRb9OeEo-unsplash.jpg'),
-(7, 'Data Warehouse', '../assets/images/photo-1544006659-f0b21884ce1d (1).avif', '../../patrick_portfolio_admin/assets/images/photo-1544006659-f0b21884ce1d (1).avif');
+(7, 'Data Warehouse', '../assets/images/photo-1544006659-f0b21884ce1d (1).avif', '../../patrick_portfolio_admin/assets/images/photo-1544006659-f0b21884ce1d (1).avif'),
+(8, 'DataBase', '../assets/images/towfiqu-barbhuiya-Q69veNk1iJQ-unsplash.jpg', '../../patrick_portfolio_admin/assets/images/towfiqu-barbhuiya-Q69veNk1iJQ-unsplash.jpg'),
+(9, 'Web Design', '../assets/images/images (1).jpeg', '../../patrick_portfolio_admin/assets/images/images (1).jpeg');
 
 --
 -- Indexes for dumped tables
@@ -186,13 +184,13 @@ ALTER TABLE `mission`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

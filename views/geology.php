@@ -1,12 +1,9 @@
-<?php
-include_once "../includes/header.php";
-include_once "../includes/sidebar.php";
-include_once "../includes/navbar.php";
-$ctr = new ServicesController();
-$ctr->store();
-$ctr->delete();
-
-?>
+<?php include_once "../includes/header.php"; ?>
+<?php include_once "../includes/sidebar.php"; ?>
+<?php include_once "../includes/navbar.php"; ?>
+<?php $ctr = new ServicesController(); ?>
+<?php $ctr->store(); ?>
+<?php $ctr->delete(); ?>
 
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">Services</h4>
 
@@ -25,13 +22,12 @@ $ctr->delete();
                         <label for="defaultFormControlInput" class="form-label">Service Description</label>
                         <textarea name="description" id="" cols="30" rows="5" class="form-control"></textarea>
                     </div>
-                    <div style="float: right;"><input type="submit" name="submit" value="Add Service" class="btn btn-primary"></div>
+                    <div style="float: right;"><input type="submit" name="submit" value="Submit" class="btn btn-primary"></div>
                 </form>
             </div>
 
         </div>
     </div>
-
 
 
     <div class="col-xl-7">
@@ -46,7 +42,7 @@ $ctr->delete();
                             <tr>
                                 <th>Service Title</th>
                                 <th>Service Description</th>
-                                <th rowspan="3">Action</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,7 +55,7 @@ $ctr->delete();
                                     </td>
                                     <td><?php echo $result['description']?></td>
 
-                                    <td><a href="edit_service.php?id_edit=<?php echo $result['id']?>&title=<?php echo $result['title']; ?>"><i class="fa fa-edit"></i></a> || <a href="services.php?id=<?php echo $result['id']?>&title=<?php echo $result['title']; ?>"><i class="fa fa-trash text-danger"></i></a></td>
+                                    <td><a href="services.php?id=<?php echo $result['id']?>"><i class="bx bx-trash me-1"></i></a></td>
 
                                 </tr>
                             <?php  }
@@ -73,6 +69,4 @@ $ctr->delete();
         </div>
     </div>
 </div>
-<?php
-include_once "../includes/footer.php";
-?>
+<?php include_once "../includes/footer.php"; ?>

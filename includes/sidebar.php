@@ -56,7 +56,7 @@
                                                         echo "active";
                                                     } ?>">
                                 <a href="services.php" class="menu-link">
-                                    <div data-i18n="Progress">Services</div>
+                                    <div data-i18n="Progress">Add Service</div>
                                 </a>
                             </li>
                             <li class="menu-item <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/mission.php')) {
@@ -87,7 +87,7 @@
                                                         echo "active";
                                                     } ?>">
                                 <a href="about.php" class="menu-link">
-                                    <div data-i18n="about.php">About Us</div>
+                                    <div data-i18n="Progress">About Us</div>
                                 </a>
                             </li>
 
@@ -96,40 +96,42 @@
 
                     <!-- Services -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Services Page</span></li>
-                    <!-- Forms -->
-                    <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/big_data.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/warehouse.php') || ($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/data_analysis.php')) {
-                                                echo "active";
-                                            } ?> open">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-detail"></i>
-                            <div data-i18n="Form Elements">Services</div>
-                        </a>
-                        <ul class="menu-sub">
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/big_data.php')) {
-                                                        echo "active";
-                                                    } ?>">
-                                <a href="big_data.php" class="menu-link">
-                                    <div data-i18n="big_data.php">Big Data</div>
-                                </a>
-                            </li>
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/warehouse.php')) {
-                                                        echo "active";
-                                                    } ?>">
-                                <a href="warehouse.php" class="menu-link">
-                                    <div data-i18n="warehouse.php">Data Warehouse</div>
-                                </a>
-                            </li>
-                            <li class="menu-item  <?php if (($_SERVER['PHP_SELF'] == '/patrick_portfolio_admin/views/data_analysis.php')) {
-                                                        echo "active";
-                                                    } ?>">
-                                <a href="data_analysis.php" class="menu-link">
-                                    <div data-i18n="data_analysis.php">Data Analysis</div>
-                                </a>
-                            </li>
+                   
 
-                        </ul>
-                    </li>
+                    <?php
+                    // Assuming $ctr->index() fetches the services from the database
+                    $ctr = new ServicesController();
+                    $services = $ctr->index();
 
+                    // Start the outer list item
+                    echo '<li class="menu-item">';
+                    echo '<a href="javascript:void(0);" class="menu-link menu-toggle">';
+                    echo '<i class="menu-icon tf-icons bx bx-detail"></i>';
+                    echo '<div data-i18n="Form Elements">Services</div>';
+                    echo '</a>';
+                    echo '<ul class="menu-sub">';
+
+                    // Output list items for each service
+                    foreach ($services as $service) {
+                        // Convert service title to lowercase and replace spaces with underscores
+                        $serviceLink = strtolower(str_replace(' ', '_', $service['title'])) . '.php';
+
+                        // Check if the current page matches the generated link
+                        $isActive = ($_SERVER['PHP_SELF'] == "/patrick_portfolio_admin/views/$serviceLink") ? 'active' : '';
+
+                        // Output list item
+                        echo '<li class="menu-item ' . $isActive . '">';
+                        // echo '<a href="view.php?service_id='.$service['id'].'" class="menu-link">';
+                        echo '<a href="' . $serviceLink . '?service_id='.$service['id'].'" class="menu-link">';
+                        echo '<div data-i18n="Progress">' . $service['title'] . '</div>';
+                        echo '</a>';
+                        echo '</li>';
+                    }
+
+                    // Close the inner list and outer list item
+                    echo '</ul>';
+                    echo '</li>';
+                    ?>
 
 
                 </ul>
